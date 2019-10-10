@@ -144,6 +144,14 @@ table {
   font-display: swap;
   src: local('Parisienne'), local('Parisienne-Regular'), url(https://fonts.gstatic.com/s/parisienne/v7/E21i_d3kivvAkxhLEVZpQyhwCg.ttf) format('truetype');
 }
+@keyframes liquidLuck {
+  0% {
+    color: #FF8C00;
+  }
+  50% {
+    color: #00FFFF;
+  }
+}
 html,
 body {
   height: 100%;
@@ -152,6 +160,7 @@ body {
   font-family: 'Handlee', cursive;
   margin: 2%;
   font-size: 62.5%;
+  background-color: aliceblue;
 }
 header {
   background-color: #00FFFF;
@@ -190,4 +199,41 @@ header .name {
   display: flex;
   flex-direction: column;
   margin: 1% 0;
+}
+.main-content .intro {
+  margin: 1%;
+  text-align: center;
+  border-bottom: 1px dashed black;
+}
+.main-content .intro h1 {
+  font-size: 1rem;
+  margin: 0 4%;
+  border-bottom: 1px dashed black;
+}
+.main-content .intro p {
+  margin: 1%;
+  padding: 1% 2%;
+  font-size: 0.8rem;
+}
+.main-content .intro mark {
+  background-color: aliceblue;
+  color: #FF8C00;
+  font-weight: bold;
+}
+.main-content .intro .luck {
+  animation-name: liquidLuck;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.main-content .intro .luckButton {
+  margin-bottom: 1%;
+  font-size: 0.8rem;
+  background-color: purple;
+  color: white;
+  border-radius: 12px;
+  border: 1px dashed teal;
+}
+.main-content .intro .luckButton:hover {
+  background-color: orange;
+  color: teal;
 }

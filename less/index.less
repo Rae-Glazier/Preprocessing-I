@@ -61,12 +61,13 @@ table {
 @header-color: #00FFFF;
 
 //mixins 
-.hover(){ //.hover opening
-	.navClass:hover { //:hover opening
-		color: #FF1493;
-		font-size: 3rem;
-	} //:hover closing
-}//.hover closing
+
+//animation
+@keyframes liquidLuck { //keyframes open
+	0% {color: #FF8C00;}
+	50% {color: #00FFFF;}
+} //keyframes close
+
 
 html, body {
     height: 100%;
@@ -78,6 +79,7 @@ body{
 	font-family: @main-font;
 	margin: 2%;
 	font-size: 62.5%;
+	background-color: aliceblue;
 }
 // header 
 header { //header opening
@@ -122,4 +124,44 @@ header { //header opening
 	display: flex;
 	flex-direction: column;
 	margin: 1% 0;
+
+	.intro{ // intro opening
+		margin: 1%;
+		text-align: center;
+		border-bottom: 1px dashed black;
+		
+		h1{ // name opening
+			font-size: 1rem;
+			margin: 0 4%;
+			border-bottom: 1px dashed black;
+		} // name closing
+
+		p{ // para opening
+			margin: 1%;
+			padding: 1% 2%;
+			font-size: 0.8rem;
+		} // para closing
+		mark{ //mark opening
+			background-color: aliceblue;
+			color: #FF8C00;
+			font-weight: bold;
+		} //mark closing
+		.luck{ //class opening
+			animation-name: liquidLuck;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+		} //class closing
+		.luckButton{ //button opening
+			margin-bottom: 1%;
+			font-size: 0.8rem;
+			background-color: purple;
+			color: white;
+			border-radius: 12px;
+			border:1px dashed teal;
+		} // button closing
+		.luckButton:hover{ // hover button
+			background-color: orange;
+			color: teal;
+		} // hover button
+	} // intro closing
 } //main content closing
