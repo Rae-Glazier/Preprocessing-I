@@ -1,1 +1,376 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Handlee';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Handlee Regular'), local('Handlee-Regular'), url(https://fonts.gstatic.com/s/handlee/v8/-F6xfjBsISg9aMakPm3wpg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Parisienne';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Parisienne'), local('Parisienne-Regular'), url(https://fonts.gstatic.com/s/parisienne/v7/E21i_d3kivvAkxhLEVZpQyhwCg.ttf) format('truetype');
+}
+@keyframes liquidLuck {
+  0% {
+    color: #FF8C00;
+  }
+  50% {
+    color: #00FFFF;
+  }
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Handlee', cursive;
+  margin: 2%;
+  font-size: 62.5%;
+  background-color: #B0C4DE;
+}
+i {
+  font-size: 2rem;
+}
+header {
+  background-color: #00FFFF;
+  margin: 1%;
+  height: 20vh;
+  width: 100%;
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2%;
+}
+header nav a {
+  padding: 0 2%;
+  margin: 0 2%;
+  text-decoration: none;
+  justify-content: space-between;
+  color: #9370DB;
+  font-size: 2rem;
+}
+header nav .navClass:hover {
+  color: #FF1493;
+  font-size: 3rem;
+}
+header .name {
+  font-size: 3rem;
+  font-family: 'Parisienne', cursive;
+  padding-bottom: 2%;
+  margin: 1%;
+  text-align: center;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  margin: 1% 0;
+}
+.main-content .intro {
+  margin: 1%;
+  text-align: center;
+  border: 1px dashed black;
+  margin-bottom: 1%;
+  width: 100%;
+}
+.main-content .intro h1 {
+  font-size: 2rem;
+  margin: 2% 4%;
+}
+.main-content .intro p {
+  margin: 1%;
+  padding: 1% 2%;
+  font-size: 1.5rem;
+}
+.main-content .intro mark {
+  background-color: #B0C4DE;
+  color: #FF8C00;
+  font-weight: bold;
+}
+.main-content .intro .luck {
+  animation-name: liquidLuck;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.main-content .intro .luckButton {
+  margin-bottom: 1%;
+  font-size: 1rem;
+  background-color: purple;
+  color: white;
+  border-radius: 12px;
+  border: 1px dashed teal;
+}
+.main-content .intro .luckButton:hover {
+  background-color: orange;
+  color: teal;
+}
+.main-content .skills {
+  margin: 1%;
+  width: 100%;
+  border: 1px dashed black;
+}
+.main-content .skills h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1% 0;
+}
+.main-content .skills .container1 {
+  display: flex;
+  font-size: 1rem;
+}
+.main-content .skills .container1 div {
+  margin: 1%;
+  padding: 3%;
+}
+.main-content .skills .container1 h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+.main-content .skills .container1 p {
+  font-size: 1.3rem;
+  padding: 3%;
+  margin: 0 5%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.main-content .work {
+  margin: 1%;
+  width: 100%;
+  border: 1px dashed black;
+}
+.main-content .work h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1% 0;
+}
+.main-content .work .container2 {
+  width: 75%;
+  margin: 0 10%;
+}
+.main-content .work .container2 h3 {
+  font-size: 2rem;
+}
+.main-content .work .container2 h4 {
+  font-size: 1.2rem;
+}
+.main-content .work .container2 p {
+  font-size: 1.4rem;
+  padding: 1%;
+}
+.main-content .contact {
+  margin: 1%;
+  width: 100%;
+  border: 1px dashed black;
+  padding: 3% 10%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.main-content .contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1%;
+}
+.main-content .contact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+  padding-bottom: 2%;
+}
+.main-content .contact .click {
+  text-align: center;
+  margin: 2% 1%;
+  padding: 1%;
+  background-color: limegreen;
+  color: yellow;
+  flex-direction: row-reverse;
+  border-radius: 40%;
+  font-size: 1rem;
+  font-style: bold;
+}
+.main-content .contact h6 {
+  padding-top: 5%;
+}
+.footer {
+  width: 100%;
+  height: 3vh;
+  margin: 1%;
+}
+.footer h6 {
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+}
+@media (max-width: 500px) {
+  header .name {
+    display: none;
+  }
+  header nav {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .intro {
+    padding: 2% 0;
+  }
+  .skills {
+    padding: 2% 0;
+  }
+  .work {
+    text-align: center;
+    padding: 2% 0;
+  }
+  .contact {
+    text-align: center;
+  }
+  .contact h3 {
+    margin: 1%;
+    padding: 1%;
+  }
+  .contact small {
+    display: none;
+  }
+  .contact .click {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+  }
+}

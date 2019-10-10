@@ -53,7 +53,286 @@ table {
     box-sizing: border-box;
 }
 
+// google fonts STRETCH 
+@import url('https://fonts.googleapis.com/css?family=Handlee|Parisienne&display=swap');
+
+//variables 
+@main-font: 'Handlee', cursive;
+@header-color: #00FFFF;
+@bg-color: #B0C4DE;
+
+//mixins 
+.center(){
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.contactColumn(){
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	
+}
+
+//animation
+@keyframes liquidLuck { //keyframes open
+	0% {color: #FF8C00;}
+	50% {color: #00FFFF;}
+} //keyframes close
+
+
 html, body {
     height: 100%;
 }
 
+
+
+body{
+	font-family: @main-font;
+	margin: 2%;
+	font-size: 62.5%;
+	background-color: @bg-color;
+}
+i {
+	font-size: 2rem;
+}
+// header 
+header { //header opening
+	background-color: @header-color;
+	margin: 1%;
+	height: 20vh;
+	width: 100%;
+	padding: 3%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+
+
+	nav { //nav opening
+		display: flex;
+		justify-content: space-evenly;
+		margin: 2%;
+
+		a { // nav a opening
+			padding: 0 2%;
+			margin: 0 2%;
+			text-decoration: none;
+			justify-content: space-between;
+			color: #9370DB;
+			font-size: 2rem;
+		} // nav a closing
+		.navClass:hover { //:hover opening
+			color: #FF1493;
+			font-size: 3rem;
+		} //:hover closing
+	} //nav closing
+	.name{ // name opening
+		font-size: 3rem;
+		font-family: 'Parisienne', cursive;
+		padding-bottom: 2%;
+		margin: 1%;
+		text-align: center;
+	} // name closing
+} //header closing
+
+//main content 
+.main-content { //main content opening
+	display: flex;
+	flex-direction: column;
+	margin: 1% 0;
+
+	.intro{ // intro opening
+		margin: 1%;
+		text-align: center;
+		border: 1px dashed black;
+		margin-bottom: 1%;
+		width: 100%;
+		
+		h1{ // name opening
+			font-size: 2rem;
+			margin: 2% 4%;
+		} // name closing
+
+		p{ // para opening
+			margin: 1%;
+			padding: 1% 2%;
+			font-size: 1.5rem;
+		} // para closing
+		mark{ //mark opening
+			background-color: @bg-color;
+			color: #FF8C00;
+			font-weight: bold;
+		} //mark closing
+		.luck{ //class opening
+			animation-name: liquidLuck;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+		} //class closing
+		.luckButton{ //button opening
+			margin-bottom: 1%;
+			font-size: 1rem;
+			background-color: purple;
+			color: white;
+			border-radius: 12px;
+			border:1px dashed teal;
+		} // button closing
+		.luckButton:hover{ // hover button
+			background-color: orange;
+			color: teal;
+		} // hover button
+	} // intro closing
+
+	.skills{ // skills opening
+		margin: 1%;
+		width: 100%;
+		border: 1px dashed black;
+
+		h2{
+			font-size: 2rem;
+			text-align: center;
+			padding: 1% 0;
+		}
+		.container1{ // container opening
+			display: flex;
+			font-size: 1rem;
+
+			div{ //div opening
+				margin: 1%;
+				padding: 3%;
+
+			} //div close
+
+			h3{
+			font-size:2rem;
+			text-align: center;
+			}
+
+			p{
+			font-size:1.3rem;
+			padding: 3%;
+			margin: 0 5%;
+			
+			.center();
+			}
+		} //container close
+	} // skills closing
+
+	.work{ //work opening
+		margin: 1%;
+		width: 100%;
+		border: 1px dashed black;
+		h2{
+			font-size: 2rem;
+			text-align: center;
+			padding: 1% 0;
+		}
+		.container2{ // container2 opening
+			width: 75%;
+			margin: 0 10%;
+
+			h3{
+			font-size:2rem;
+			}
+
+			h4{
+				font-size:1.2rem;
+			}
+
+			p{
+				font-size: 1.4rem;
+				padding: 1%;
+			}
+		} //container2 closing
+	} //work closing
+	.contact{ //contact starts
+		margin: 1%;
+		width: 100%;
+		border: 1px dashed black;
+		padding: 3% 10%;
+		.contactColumn();
+
+		h2 {
+			font-size: 2rem;
+			margin-bottom: 1%;
+		}
+		h3 {
+			font-size: 1.5rem;
+			margin-bottom: 1%;
+			padding-bottom: 2%;
+		}
+		.click{
+			text-align: center;	
+			margin:2% 1%;
+			padding: 1%;
+			background-color: limegreen;
+			color: yellow;
+			flex-direction: row-reverse;
+			border-radius: 40%;
+			font-size: 1rem;
+			font-style: bold;
+		}
+		h6{
+			padding-top: 5%;
+		}
+	} //contact ends
+} //main content closing
+
+//footer
+
+.footer{
+	width: 100%;
+	height: 3vh;
+	margin: 1%;
+
+	h6{
+		font-size: 1rem;
+		text-align: center;
+		color: black;
+	}
+}
+
+// media queries
+
+@media (max-width: 500px) { // 500px open
+	header{ // header open
+		.name{
+			display: none;
+		}
+		nav{ // nav open
+			flex-wrap: wrap;
+			width: 100%;
+		} // nav close
+	} // header close
+
+	.intro{
+		padding: 2% 0;
+	}
+
+	.skills{
+		padding: 2% 0;
+	}
+
+	.work{ // work open 
+		text-align: center;
+		padding: 2% 0;
+	} // work close 
+
+	.contact{ // contact open
+		text-align: center;
+		h3{
+			margin: 1%;
+			padding: 1%;
+		}
+		small{
+			display: none;
+		}
+		.click{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			text-decoration: none;
+		}
+	} // contact close
+} // 500 px close
