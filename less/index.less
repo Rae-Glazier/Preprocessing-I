@@ -59,8 +59,22 @@ table {
 //variables 
 @main-font: 'Handlee', cursive;
 @header-color: #00FFFF;
+@bg-color: #B0C4DE;
 
 //mixins 
+.center(){
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.contactColumn(){
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	
+}
 
 //animation
 @keyframes liquidLuck { //keyframes open
@@ -79,7 +93,7 @@ body{
 	font-family: @main-font;
 	margin: 2%;
 	font-size: 62.5%;
-	background-color: aliceblue;
+	background-color: @bg-color;
 }
 i {
 	font-size: 2rem;
@@ -147,7 +161,7 @@ header { //header opening
 			font-size: 1.5rem;
 		} // para closing
 		mark{ //mark opening
-			background-color: aliceblue;
+			background-color: @bg-color;
 			color: #FF8C00;
 			font-weight: bold;
 		} //mark closing
@@ -199,7 +213,8 @@ header { //header opening
 			font-size:1.3rem;
 			padding: 3%;
 			margin: 0 5%;
-			text-align: center;
+			
+			.center();
 			}
 		} //container close
 	} // skills closing
@@ -231,9 +246,93 @@ header { //header opening
 			}
 		} //container2 closing
 	} //work closing
-	.contact{
+	.contact{ //contact starts
 		margin: 1%;
 		width: 100%;
 		border: 1px dashed black;
-	}
+		padding: 3% 10%;
+		.contactColumn();
+
+		h2 {
+			font-size: 2rem;
+			margin-bottom: 1%;
+		}
+		h3 {
+			font-size: 1.5rem;
+			margin-bottom: 1%;
+			padding-bottom: 2%;
+		}
+		.click{
+			text-align: center;	
+			margin:2% 1%;
+			padding: 1%;
+			background-color: limegreen;
+			color: yellow;
+			flex-direction: row-reverse;
+			border-radius: 40%;
+			font-size: 1rem;
+			font-style: bold;
+		}
+		h6{
+			padding-top: 5%;
+		}
+	} //contact ends
 } //main content closing
+
+//footer
+
+.footer{
+	width: 100%;
+	height: 3vh;
+	margin: 1%;
+
+	h6{
+		font-size: 1rem;
+		text-align: center;
+		color: black;
+	}
+}
+
+// media queries
+
+@media (max-width: 500px) { // 500px open
+	header{ // header open
+		.name{
+			display: none;
+		}
+		nav{ // nav open
+			flex-wrap: wrap;
+			width: 100%;
+		} // nav close
+	} // header close
+
+	.intro{
+		padding: 2% 0;
+	}
+
+	.skills{
+		padding: 2% 0;
+	}
+
+	.work{ // work open 
+		text-align: center;
+		padding: 2% 0;
+	} // work close 
+
+	.contact{ // contact open
+		text-align: center;
+		h3{
+			margin: 1%;
+			padding: 1%;
+		}
+		small{
+			display: none;
+		}
+		.click{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			text-decoration: none;
+		}
+	} // contact close
+} // 500 px close
