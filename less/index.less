@@ -81,6 +81,9 @@ body{
 	font-size: 62.5%;
 	background-color: aliceblue;
 }
+i {
+	font-size: 2rem;
+}
 // header 
 header { //header opening
 	background-color: @header-color;
@@ -103,15 +106,15 @@ header { //header opening
 			text-decoration: none;
 			justify-content: space-between;
 			color: #9370DB;
-			font-size: 1rem;
+			font-size: 2rem;
 		} // nav a closing
 		.navClass:hover { //:hover opening
 			color: #FF1493;
-			font-size: 2rem;
+			font-size: 3rem;
 		} //:hover closing
 	} //nav closing
 	.name{ // name opening
-		font-size: 2rem;
+		font-size: 3rem;
 		font-family: 'Parisienne', cursive;
 		padding-bottom: 2%;
 		margin: 1%;
@@ -131,7 +134,7 @@ header { //header opening
 		border-bottom: 1px dashed black;
 		
 		h1{ // name opening
-			font-size: 1rem;
+			font-size: 2rem;
 			margin: 0 4%;
 			border-bottom: 1px dashed black;
 		} // name closing
@@ -139,7 +142,7 @@ header { //header opening
 		p{ // para opening
 			margin: 1%;
 			padding: 1% 2%;
-			font-size: 0.8rem;
+			font-size: 1.5rem;
 		} // para closing
 		mark{ //mark opening
 			background-color: aliceblue;
@@ -153,7 +156,7 @@ header { //header opening
 		} //class closing
 		.luckButton{ //button opening
 			margin-bottom: 1%;
-			font-size: 0.8rem;
+			font-size: 1rem;
 			background-color: purple;
 			color: white;
 			border-radius: 12px;
@@ -164,4 +167,41 @@ header { //header opening
 			color: teal;
 		} // hover button
 	} // intro closing
+
+	.skills{ // skills opening
+		margin: 0 1%;
+		width: 100%;
+
+		h2{
+			font-size: 2rem;
+			text-align: center;
+			padding: 1% 0;
+		}
+		.container1{ // container opening
+			display: flex;
+			font-size: 1rem;
+
+			div{ //div opening
+				margin: 1%;
+				padding: 3%;
+
+			} //div close
+
+			h3{
+			font-size:2rem;
+			text-align: center;
+			}
+
+			p{
+			font-size:1.3rem;
+			padding: 3%;
+			margin: 0 5%;
+			text-align: center;
+			}
+		} //container close
+	} // skills closing
+
+	.work{ //work opening
+		border: 1px solid red;
+	} //work closing
 } //main content closing
