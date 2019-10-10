@@ -130,7 +130,64 @@ table {
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Handlee';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Handlee Regular'), local('Handlee-Regular'), url(https://fonts.gstatic.com/s/handlee/v8/-F6xfjBsISg9aMakPm3wpg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Parisienne';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Parisienne'), local('Parisienne-Regular'), url(https://fonts.gstatic.com/s/parisienne/v7/E21i_d3kivvAkxhLEVZpQyhwCg.ttf) format('truetype');
+}
 html,
 body {
   height: 100%;
+}
+body {
+  font-family: 'Handlee', cursive;
+  margin: 2%;
+  font-size: 62.5%;
+}
+header {
+  background-color: #00FFFF;
+  height: 20vh;
+  width: 100%;
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2%;
+}
+header nav a {
+  padding: 0 2%;
+  margin: 0 2%;
+  text-decoration: none;
+  justify-content: space-between;
+  color: #9370DB;
+  font-size: 1rem;
+}
+header nav .navClass:hover {
+  color: #FF1493;
+  font-size: 2rem;
+}
+header .name {
+  font-size: 2rem;
+  font-family: 'Parisienne', cursive;
+  padding-bottom: 2%;
+  margin: 1%;
+  text-align: center;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  margin: 1% 0;
 }

@@ -53,7 +53,73 @@ table {
     box-sizing: border-box;
 }
 
+// google fonts STRETCH 
+@import url('https://fonts.googleapis.com/css?family=Handlee|Parisienne&display=swap');
+
+//variables 
+@main-font: 'Handlee', cursive;
+@header-color: #00FFFF;
+
+//mixins 
+.hover(){ //.hover opening
+	.navClass:hover { //:hover opening
+		color: #FF1493;
+		font-size: 3rem;
+	} //:hover closing
+}//.hover closing
+
 html, body {
     height: 100%;
 }
 
+
+
+body{
+	font-family: @main-font;
+	margin: 2%;
+	font-size: 62.5%;
+}
+// header 
+header { //header opening
+	background-color: @header-color;
+	height: 20vh;
+	width: 100%;
+	padding: 3%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+
+
+	nav { //nav opening
+		display: flex;
+		justify-content: space-evenly;
+		margin: 2%;
+
+		a { // nav a opening
+			padding: 0 2%;
+			margin: 0 2%;
+			text-decoration: none;
+			justify-content: space-between;
+			color: #9370DB;
+			font-size: 1rem;
+		} // nav a closing
+		.navClass:hover { //:hover opening
+			color: #FF1493;
+			font-size: 2rem;
+		} //:hover closing
+	} //nav closing
+	.name{ // name opening
+		font-size: 2rem;
+		font-family: 'Parisienne', cursive;
+		padding-bottom: 2%;
+		margin: 1%;
+		text-align: center;
+	} // name closing
+} //header closing
+
+//main content 
+.main-content { //main content opening
+	display: flex;
+	flex-direction: column;
+	margin: 1% 0;
+} //main content closing
